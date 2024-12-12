@@ -53,7 +53,12 @@ make run
 make docker-build 
 make docker-run 
 ```
- 
+4. Запуск.
+```bash
+go build -o main ./cmd
+./main -c config.env
+```
+
 ## Переменные окружения 
 - DATABASE_URL — строка подключения к PostgreSQL. 
 - GRPC_PORT — порт для gRPC-сервера. 
