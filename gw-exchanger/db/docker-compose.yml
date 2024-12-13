@@ -9,10 +9,9 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: securepassword
       POSTGRES_DB: my_database
-      # Отключение SSL
       POSTGRES_HOST_AUTH_METHOD: trust
     volumes:
       - ./db:/docker-entrypoint-initdb.d
     ports:
       - "5432:5432"
-    command: "postgres -c ssl=off"
+    command: postgres -c ssl=off
