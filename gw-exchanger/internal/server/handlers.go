@@ -2,7 +2,8 @@ package grpc
 
 import (
 	"context"
-	pb "gw-exchanger/internal/grpc/pb"
+
+	pb "github.com/SafetyDuck5676/grpc_duck/proto-exchange/grpc/pb"
 )
 
 func (s *Server) GetExchangeRates(ctx context.Context, req *pb.Empty) (*pb.ExchangeRatesResponse, error) {

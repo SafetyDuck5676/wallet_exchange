@@ -2,9 +2,10 @@ package main
 
 import (
 	"gw-exchanger/internal/config"
-	"gw-exchanger/internal/grpc"
 	"gw-exchanger/internal/storages/postgres"
 	utils "gw-exchanger/pkg"
+
+	grpc "gw-exchanger/internal/server"
 
 	"log"
 )

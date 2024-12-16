@@ -1,11 +1,11 @@
 package grpc
 
 import (
-	pb "gw-exchanger/internal/grpc/pb"
 	"gw-exchanger/internal/storages"
 	"log"
 	"net"
 
+	pb "github.com/SafetyDuck5676/grpc_duck/proto-exchange/grpc/pb"
 	"google.golang.org/grpc"
 )
 
