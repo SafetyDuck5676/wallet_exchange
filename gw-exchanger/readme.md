@@ -39,26 +39,10 @@ gw-exchanger/
  ```
  
 ## Запуск 
-1. Установите зависимости: 
-```bash
- go mod tidy 
+Нужно поднять docker контейнер с проектом внутри
 ```
-2. Соберите и запустите: 
-``` bash 
-make build 
-make run
-``` 
-3. Используйте Docker: 
-```bash 
-make docker-build 
-make docker-run 
+docker compose up
 ```
-4. Запуск.
-```bash
-go build -o main ./cmd
-./main -c config.env
-```
-
 ## Переменные окружения 
 - DATABASE_URL — строка подключения к PostgreSQL. 
 - GRPC_PORT — порт для gRPC-сервера. 
