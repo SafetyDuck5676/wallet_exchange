@@ -24,8 +24,8 @@ func (ps *PostgresStorage) GetExchangeRates() (map[string]float64, error) {
 	return rates, nil
 }
 
-func (ps *PostgresStorage) GetExchangeRate(fromCurrency, toCurrency string) (float64, error) {
-	var rate float64
+func (ps *PostgresStorage) GetExchangeRate(fromCurrency, toCurrency string) (float32, error) {
+	var rate float32
 	query := "SELECT rate FROM exchange_rates WHERE from_currency = $1 AND to_currency = $2"
 	err := ps.db.QueryRow(query, fromCurrency, toCurrency).Scan(&rate)
 	if err != nil {

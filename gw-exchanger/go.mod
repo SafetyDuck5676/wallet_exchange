@@ -5,7 +5,7 @@ go 1.22
 toolchain go1.22.10
 
 require (
-	github.com/SafetyDuck5676/grpc_duck v0.0.0-20241216135530-3fb8a7e8014e
+	//github.com/SafetyDuck5676/grpc_duck v0.0.0-20241216135530-3fb8a7e8014e
 	github.com/lib/pq v1.10.9
 	github.com/spf13/viper v1.19.0
 	google.golang.org/grpc v1.69.0

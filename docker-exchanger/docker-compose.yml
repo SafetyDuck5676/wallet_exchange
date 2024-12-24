@@ -1,0 +1,67 @@
+services:
+  db_server:
+    image: postgres:latest
+    container_name: db_server
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: securepassword
+      POSTGRES_DB: my_database
+    volumes:
+      - db_server:/var/lib/postgresql/data
+      - ./exchanger/db/migrations:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    command: postgres -c ssl=off
+
+  db_client:
+    image: postgres:latest
+    container_name: db_client
+    environment:
+      POSTGRES_USER: wallet_user
+      POSTGRES_PASSWORD: wallet_password
+      POSTGRES_DB: wallet_db
+    volumes:
+      - db_client:/var/lib/postgresql/data
+      - ./wallet/db/migrations:/docker-entrypoint-initdb.d
+    ports:
+      - "5433:5432"
+    command: postgres -c ssl=off
+
+  server:
+    restart: on-failure
+    build:
+      context: ./..
+      dockerfile: docker-exchanger/exchanger/Dockerfile
+    ports:
+      - "8081:8080"
+    depends_on:
+      - db_server
+    environment:
+      DB_HOST: db_server
+      DB_PORT: 5432
+      DB_USER: admin
+      DB_PASSWORD: securepassword
+      DB_NAME: my_database
+      DB_SSLMODE: disable
+
+  client:
+    restart: on-failure
+    build:
+      context: ./..
+      dockerfile: docker-exchanger/wallet/Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db_client
+    environment:
+      DB_HOST: db_client
+      DB_PORT: 5432
+      DB_USER: wallet_user
+      DB_PASSWORD: wallet_password
+      DB_NAME: wallet_db
+      DB_SSLMODE: disable
+
+
+volumes:
+  db_server:
+  db_client:
