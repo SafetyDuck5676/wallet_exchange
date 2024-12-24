@@ -16,7 +16,6 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-// Mock für WalletService
 type MockWalletService struct {
 	mock.Mock
 }
@@ -36,7 +35,6 @@ func (m *MockWalletService) GetBalance(ctx context.Context, walletID uuid.UUID) 
 	return args.Get(0).(int64), args.Error(1)
 }
 
-// Test für HandleWalletOperation
 func TestHandleWalletOperation(t *testing.T) {
 	mockService := new(MockWalletService)
 	handler := handler.NewWalletHandler(mockService)
@@ -101,7 +99,6 @@ func TestHandleWalletOperation(t *testing.T) {
 	})
 }
 
-// Test für GetBalance
 func TestGetBalance(t *testing.T) {
 	mockService := new(MockWalletService)
 	handler := handler.NewWalletHandler(mockService)
