@@ -11,7 +11,7 @@ require (
 	github.com/stretchr/testify v1.9.0
 	google.golang.org/grpc v1.69.0
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
-	//github.com/SafetyDuck5676/grpc_duck v0.0.0-20241216135530-3fb8a7e8014e
+	github.com/SafetyDuck5676/grpc_duck v0.0.0-20241216135530-3fb8a7e8014e
 )
 
 require (

@@ -1,5 +1,5 @@
-github.com/SafetyDuck5676/grpc_duck v0.0.0-20241216135530-3fb8a7e8014e h1:bZGXVQMstfwjc7YRwYXm4g2nKd9hUUFY42X6zCxqHGE=
-github.com/SafetyDuck5676/grpc_duck v0.0.0-20241216135530-3fb8a7e8014e/go.mod h1:TifRhs4LHkQYjTB5JFawz+Zm4pBaJb8Mn5FFVUTpa58=
+github.com/SafetyDuck5676/grpc_duck v0.0.0-20241224092532-902857c34d7d h1:bpsvZCwCAgGrWhz+/nMS7ZW4U90x4ZLWFrgpBLzDD0M=
+github.com/SafetyDuck5676/grpc_duck v0.0.0-20241224092532-902857c34d7d/go.mod h1:TifRhs4LHkQYjTB5JFawz+Zm4pBaJb8Mn5FFVUTpa58=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc h1:U9qPSI2PIWSS1VwoXQT9A3Wy9MM3WgvqSxFWenqJduM=

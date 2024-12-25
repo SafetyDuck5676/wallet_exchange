@@ -14,8 +14,8 @@ import (
 
 	// "wallet-service/internal/model"
 
-	pb "wallet/internal/grpc/proto-exchange/grpc/pb"
-
+	// pb "wallet/internal/grpc/proto-exchange/grpc/pb"
+	pb "github.com/SafetyDuck5676/grpc_duck/proto-exchange"
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/google/uuid"
 	"google.golang.org/grpc"

@@ -5,8 +5,8 @@ import (
 	"log"
 	"net"
 
-	//pb "github.com/SafetyDuck5676/grpc_duck/proto-exchange/grpc/pb"
-	pb "gw-exchanger/internal/grpc/proto-exchange/grpc/pb"
+	pb "github.com/SafetyDuck5676/grpc_duck/proto-exchange"
+	// pb "gw-exchanger/internal/grpc/proto-exchange/grpc/pb"
 
 	"google.golang.org/grpc"
 )
